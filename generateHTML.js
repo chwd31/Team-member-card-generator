@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Handlebars = require('handlebars');
-const team = require('./server').team;
+const team = require('./classes/team').team;
 
 // Load the HTML template
 const template = fs.readFileSync('template.html', 'utf8');
