@@ -4,6 +4,7 @@ const Employee = require('./classes/employee');
 const Manager = require('./classes/Manager');
 const Engineer = require('./classes/Engineer');
 const Intern = require('./classes/Intern');
+const generateHTML = require('./generateHTML')
 
 const team = [];
 

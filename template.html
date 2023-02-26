@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Team Roster</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>My Team</h1>
+      </div>
+    </div>
+    <div class="row">
+      {{#each team}}
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>{{this.name}}</h3>
+            <h4>{{this.getRole()}}</h4>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Employee ID: {{this.id}}</li>
+              <li>Email: <a href="mailto:{{this.email}}">{{this.email}}</a></li>
+              {{#if this.officeNumber}}
+              <li>Office Number: {{this.officeNumber}}</li>
+              {{/if}}
+              {{#if this.github}}
+              <li>Github: <a href="https://github.com/{{this.github}}" target="_blank">{{this.github}}</a></li>
+              {{/if}}
+              {{#if this.school}}
+              <li>School: {{this.school}}</li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</body>
+
+</html>
