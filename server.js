@@ -1,5 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Employee = require('./classes/employee');
+const Manager = require('./classes/Manager');
+const Engineer = require('./classes/Engineer');
+const Intern = require('./classes/Intern');
 
 const team = [];
 
@@ -77,12 +81,7 @@ const internQuestions = [
 
 // Prompt the user for the team manager's information
 inquirer.prompt(managerQuestions).then((managerAnswers) => {
-  const manager = {
-    name: managerAnswers.name,
-    id: managerAnswers.id,
-    email: managerAnswers.email,
-    officeNumber: managerAnswers.officeNumber,
-  };
+  const manager = new Manager(managerAnswers.name, managerAnswers.id, managerAnswers.email, managerAnswers.officeNumber);
   team.push(manager);
 
   // Prompt the user for the team members' information
@@ -99,31 +98,20 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
     ]).then((memberAnswers) => {
       if (memberAnswers.memberType === 'Engineer') {
         inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
-          const engineer = {
-            name: engineerAnswers.name,
-            id: engineerAnswers.id,
-            email: engineerAnswers.email,
-            github: engineerAnswers.github,
-          };
+          const engineer = new Engineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.email, engineerAnswers.github);
           team.push(engineer);
           addTeamMember();
         });
       } else if (memberAnswers.memberType === 'Intern') {
         inquirer.prompt(internQuestions).then((internAnswers) => {
-          const intern = {
-            name: internAnswers.name,
-            id: internAnswers.id,
-            email: internAnswers.email,
-            school: internAnswers.school,
-          };
+          const intern = new Intern(internAnswers.name, internAnswers.id, internAnswers.email, internAnswers.school);
           team.push(intern);
           addTeamMember();
         });
-  } else {
+        } else {
         // Finish building team
         console.log('Team roster:', team);
-        // Generate HTML page
-        // ...
+        generateHTML(team);
       }
     });
   }
