@@ -1,3 +1,5 @@
+//server.js
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Employee = require('./classes/employee');
@@ -8,7 +10,7 @@ const generateHTML = require('./generateHTML');
 const team = require('./classes/team');
 
 
-const team = [];
+// const team = [];
 
 // Questions for the team manager
 const managerQuestions = [
