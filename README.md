@@ -3,14 +3,14 @@
 This Node.js command-line application takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. It uses Inquirer version 8.2.4 to prompt the user for input and Jest for testing.
 
 ## Table of Contents
-1. [Installation](##Installation)
-2. [Usage](##Usage) 
-3. [Features](##Features)
-4. [Contributing](##Contributing)
-5. [License](##License) 
-6. [Credits](##Credites) 
-7. [Contact](##Contact) 
-8. [Acknowledgments](##Acknowledgements)
+1. [Installation](#installation)
+2. [Usage](#usage) 
+3. [Features](#features)
+4. [Contributing](#contributing)
+5. [License](#license) 
+6. [Credits](#credites) 
+7. [Contact](#contact) 
+8. [Acknowledgments](#acknowledgements)
 
 
 ## Installation
