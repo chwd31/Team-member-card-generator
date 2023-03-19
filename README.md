@@ -21,8 +21,16 @@ npm install
 This will install Inquirer version 8.2.4 and Jest.
 
 ## Usage
+![Screenshot 2023-03-19 at 6 12 50 PM](https://user-images.githubusercontent.com/118683737/226215847-d25281c4-c21e-4b9d-af7d-e53c7cbd84d9.png)
+
 To start the application, run the following command in your terminal:
-node index.js
+node server.js
+![Screenshot 202![Screenshot 2023-03-19 at 6 06 53 PM](https://user-images.githubusercontent.com/118683737/226215824-068a46dc-3608-40d2-bb6d-80ff06692831.png)
+3-03-19 at 6 07 37 PM](https://user-images.githubusercontent.com/118683737/226215818-fa6aa758-729b-462a-933b-eedc69a71597.png)
+![Screenshot 2023-03-19 at 6 06 16 PM](https://user-images.githubusercontent.com/118683737/226215827-9b9bf8ff-d937-40de-a5ae-5b207199eb4a.png)
+![Screenshot 2023-03-19 at 6 05 41 PM](https://user-images.githubusercontent.com/118683737/226215838-89222ea3-4a1f-4122-99ab-2cbc5da57d16.png)
+
+
 
 Follow the prompts to enter information about your team members. You will be prompted to enter the team manager’s name, employee ID, email address, and office number. After entering this information, you will be presented with a menu with the option to add an engineer or an intern or to finish building your team.
 
